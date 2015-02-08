@@ -10,3 +10,5 @@ fi
 
 pip install django
 pip install pyyaml
+
+export DJANGO_SETTINGS_MODULE=dsettings
