@@ -1,0 +1,19 @@
+datetime: 2015-01-14 12:44:06.439966
+filename: 2015-02-14_lynforedrag
+title: Miniforedrag / Lynforedrag
+format: text
+class: innkalling
+image: images/tallinn.jpg
+template: "innkalling.html"
+event:
+  start: 2015-02-26 19:00:00
+  duration: 2h
+  location: Bergen Offentlige Bibliotek
+  address: Strømgaten 6, Bergen
+  speaker: Deg? med flere
+---
+I februar kjører vi miniforedrag, der du kan presentere dine prosjekter,
+verktøy, tips og triks eller meninger om Linux, BSD og fri programvare.
+
+Vi legger opp til foredrag på ca 10 minutter, inkludert spørsmålsrunde
+og opptil 11 foredragsholdere

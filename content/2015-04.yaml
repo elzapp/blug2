@@ -1,0 +1,15 @@
+datetime: 2015-01-14 12:44:06.439966
+filename: 2015-04-30_stormaskin
+title: Linux på Stormaskin
+format: text
+class: innkalling
+image: images/tallinn.jpg
+template: "innkalling.html"
+event:
+  start: 2015-05-30 19:00:00
+  duration: 2h
+  location: Bergen Offentlige Bibliotek
+  address: Strømgaten 6, Bergen
+  speaker: Christer Solskogen
+---
+Mer info kommer senere.

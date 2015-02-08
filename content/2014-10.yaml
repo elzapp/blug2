@@ -1,0 +1,32 @@
+datetime: 2015-01-14 12:44:06.439966
+filename: 2014-10-30_personvern
+title: "To foredrag: Personvern på nett i kjølvannet av Edward Snowden & STARTTLS"
+format: text
+class: innkalling
+image: images/tallinn.jpg
+template: "innkalling.html"
+event:
+  start: 2014-10-30 19:00:00
+  duration: 2h
+  location: Bergen Offentlige Bibliotek
+  address: Strømgaten 6, Bergen
+  speaker: Per Torsheim & Runa Sandvik
+---
+denne gangen med to temaer:
+
+<ul>
+<li>Personvern på nett i kjølvannet av Edward Snowden, ved Runa Sandvik</li>
+<li>STARTTLS – Et lite skritt for en mailadmin, et gigantisk steg for personvernet, ved Per Thorsheim</li>
+</ul>
+
+<h3>Personvern på nett i kjølvannet av Edward Snowden</h3>
+De fleste har hørt om Edward Snowden og dokumentene han gav til Laura Poitras og Glenn Greenwald i 2013. Media har over lang tid kommet med stadig nye avsløringer om global overvåkning i en massiv skala som ingen hadde forestilt seg. I denne presentasjonen vil Runa fortelle mer om hva det faktisk var som skjedde, hvordan dette påvirker vårt personvern og ikke minst hva vi kan og bør gjøre for å beskytte oss i fremtiden.
+
+Runa A. Sandvik, teknisk rådgiver for Freedom of the Press, USA. (Runa arrangerte cryptoparty med Snowden på Hawaii) Twitter: @runasand
+
+<h3>STARTTLS – Et lite skritt for en mailadmin, et gigantisk steg for personvernet</h3>
+RFC3207 er en standard for opportunistisk kryptering mellom 2 mailservere på internett, og er transparent for sluttbrukerne. Per iverksatte utrullingen av RFC 3207 hos en ikke ukjent stor norsk ISP med hovedkontor på Fornebu for ca 10 år siden. Våren presenterte han og en kollega resultatene fra en sjekk av rundt 400K domener og deres støtte for standarden. Våren 2014 spanderte Per brus og pizza på en Osloborger, og fikk på den måten utviklet websiden https://starttls.info/
+
+Per vil presentere resultatene som de har oppnådd på bare få måneder med denne tjenesten, og videre hva vi alle kan gjøre for å bedre sikkerhet & personvern globalt for fremtiden.
+
+Per Thorsheim, passordgærning, grunnlegger av PasswordsCon.org og idealist. Sikkerhetsrådgiver på dagtid. Twitter: @thorsheim
