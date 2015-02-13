@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+PRODID:-blug
+BEGIN:VEVENT
+DTSTART:{{event.start|date:"Ymd\\THis"}} Europe/Oslo
+DTEND:{{event.end|date:"Ymd\\THis"}} Europe/Oslo
+LOCATION:Bergen Offentlige bibliotek
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:BLUG: {{title}}
+SUMMARY:BLUG: {{title}}
+END:VEVENT
+END:VCALENDAR

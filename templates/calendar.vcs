@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+PRODID:-blug
+BEGIN:VEVENT
+DTSTART:{{neste.event.start|date:"Ymd\\THis"}} Europe/Oslo
+DTEND:{{neste.event.end|date:"Ymd\\THis"}} Europe/Oslo
+LOCATION:Bergen Offentlige bibliotek
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:BLUG: {{neste.title}}
+SUMMARY:BLUG: {{neste.title}}
+END:VEVENT
+{% for other in kommende|dictsort:"event.start" %}
+BEGIN:VEVENT
+DTSTART:{{other.event.start|date:"Ymd\\THis"}} Europe/Oslo
+DTEND:{{other.event.end|date:"Ymd\\THis"}} Europe/Oslo
+LOCATION:Bergen Offentlige bibliotek
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:BLUG: {{other.title}}
+SUMMARY:BLUG: {{other.title}}
+END:VEVENT
+{% endfor %}
+END:VCALENDAR

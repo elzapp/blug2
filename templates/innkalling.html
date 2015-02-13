@@ -2,32 +2,64 @@
 {% block pagetitle %} - Innkalling {{event.start|date:"E Y"|lower}}: {{title}}{% endblock %}
 
 {% block body %}
-<div id="main">
-<section class="details">
-  <h2><small>Innkalling:</small>{{title}}</h2>
-<!--<img src="{{image}}" class="teaser">-->
-
-</section>
-<dl class="eventdetails">
-  <dt>Tid</dt>
-  <dd>{{event.start|date:"l d M Y H:i"}}</dd>
-  <dt>Sted</dt>
-  <dd>{{event.location}}</dd>
-  <dt>Foredragsholder</dt>
-  <dd>{{event.speaker}}</dd>
-</dl>
+<div class="container">
+  <h2><small>Innkalling:</small><br>{{title}}</h2>
+  <div class="row">
+<div class="col-md-8"
 <section class="body">
   {{content|safe}}
-</section>
-<ul>
-{% for other in others.kommende|dictsort:"event.start" %}
-  <li><a href="{{other.filename}}.html">{{other.event.start|date:"Y-m-d"}} {{other.title}}</a></li>
-{% endfor %}
-</ul>
-<ul>
-  {% for other in others.tidligere|dictsort:"event.start" reversed %}
-  <li><a href="{{other.filename}}.html">{{other.event.start|date:"Y-m-d"}} {{other.title}}</a></li>
-  {% endfor %}
-</ul>
+</div>
+
+
+<div class="col-md-4">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Tid og sted</h3>
+    </div>
+    <div class="panel-body">
+      <dl class="eventdetails">
+        <dt>Tid</dt>
+        <dd>{{event.start|date:"l d M Y H:i"}}</dd>
+        <dt>Sted</dt>
+        <dd>{{event.location}}</dd>
+        <dt>Foredragsholder</dt>
+        <dd>{{event.speaker}}</dd>
+      </dl>
+      <a href="{{filename}}.vcs">legg til i kalender</a>
+    </div>
+  </div>
+</div>
+
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Kommende møter</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          {% for other in others.kommende|dictsort:"event.start" %}
+          <li><a href="{{other.filename}}.html">{{other.event.start|date:"Y-m-d"}} {{other.title}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Tidligere møter</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          {% for other in others.tidligere|dictsort:"event.start" reversed %}
+          <li><a href="{{other.filename}}.html">{{other.event.start|date:"Y-m-d"}} {{other.title}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 {% endblock %}

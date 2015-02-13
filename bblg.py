@@ -38,6 +38,8 @@ def loadsingle(f):
             else:
                 parts[p] +=line
     ctx=yaml.load(parts[0])
+    if "event" in ctx:
+        ctx["event"]["end"]=ctx["event"]["start"] +  datetime.timedelta(0, 7200)
     ctx["content"]="<p>"+parts[1].replace("\n\n","</p>\n\n<p>").strip()+"</p>"
     return ctx
 
@@ -66,9 +68,11 @@ def buildallhtml(data):
         ctx=copy.deepcopy(c)
         ctx["others"]=index_data
         write_file(ctx,"templates/"+ctx["template"],"html/"+ctx["filename"]+".html")
+        write_file(ctx,"templates/innkalling.vcs","html/"+ctx["filename"]+".vcs")
 
 def build_index(data):
     write_file(data,"templates/index.html","html/index.html")
+    write_file(data,"templates/calendar.vcs","html/calendar.vcs")
 
 
 def main(*args):
