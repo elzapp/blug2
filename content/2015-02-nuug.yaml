@@ -1,0 +1,22 @@
+datetime: 2015-01-14 12:44:06.439966
+filename: 2015-02-10_openstack
+title: "Fellesvisning fra NUUG: OpenStack"
+format: text
+class: innkalling
+image: images/tallinn.jpg
+template: "innkalling.html"
+event:
+  start: 2015-02-10 18:30:00
+  duration: 2h
+  location: Bergen Offentlige Bibliotek
+  address: Strømgaten 6, Bergen
+  speaker: Dag Stenstad på video fra Oslo
+---
+BLUG viser månedens NUUG foredrag i auditoriet på biblioteket.
+Temaet denne gangen er OpenStack.
+
+Månedens tema er: «OpenStack» med Dag Stenstad. Foredraget vil foregå på norsk:
+
+Dag Stenstad fra Zetta.IO presenterer hvordan man kommer igang med drift av tjenester i nettskyen. De siste årene har skjedd en stor omveltning i den globale IT-bransjen, hvor IT-infrastruktur blir industrialisert og standardisert. Dette legger grunnlaget for helt andre drifts- og utviklingsmodeller enn det som benyttes i dag. Automatisering av oppsett og styring av kapasitet, gjør at fokus endres fra det å drifte enkelte servere, til å levere tjenester.
+
+Se også NUUGs annonsering http://www.nuug.no/aktiviteter/20150210-openstack/
