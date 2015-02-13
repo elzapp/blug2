@@ -7,8 +7,16 @@ then
   virtualenv $ENVDIR
 fi
 . $ENVDIR/bin/activate
-
-pip install django
-pip install pyyaml
-
+if python -c "import django" 2>/dev/null
+then
+  echo "found django"
+else
+  pip install django
+fi
+if python -c "import yaml" 2>/dev/null
+then
+  echo "found yaml"
+else
+  pip install pyyaml
+fi
 export DJANGO_SETTINGS_MODULE=dsettings
