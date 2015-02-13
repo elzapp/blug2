@@ -1,0 +1,12 @@
+@import url("sourcesanspro/stylesheet.css");
+
+.navbar-brand {
+  position:relative;
+  padding-left:70px;
+}
+.navbar-brand img {
+  position:absolute;
+  top:0;
+  left:0;
+  height:60px;
+}

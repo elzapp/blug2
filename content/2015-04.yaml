@@ -6,7 +6,7 @@ class: innkalling
 image: images/tallinn.jpg
 template: "innkalling.html"
 event:
-  start: 2015-05-30 19:00:00
+  start: 2015-04-30 19:00:00
   duration: 2h
   location: Bergen Offentlige Bibliotek
   address: Strømgaten 6, Bergen

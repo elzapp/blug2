@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+PRODID:-blug
+BEGIN:VEVENT
+DTSTART:{{event.start_utc|date:"Ymd\\THis"}}Z
+DTEND:{{event.end_utc|date:"Ymd\\THis"}}Z
+LOCATION:Bergen Offentlige bibliotek
+DESCRIPTION:BLUG: {{title}}
+SUMMARY:BLUG: {{title}}
+END:VEVENT
+END:VCALENDAR

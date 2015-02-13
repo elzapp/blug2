@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-blug
+BEGIN:VEVENT
+DTSTART:{{neste.event.start_utc|date:"Ymd\\THis"}}Z
+DTEND:{{neste.event.end_utc|date:"Ymd\\THis"}}Z
+LOCATION:Bergen Offentlige bibliotek
+DESCRIPTION:BLUG: {{neste.title}}
+SUMMARY:BLUG: {{neste.title}}
+END:VEVENT
+{% for other in kommende|dictsort:"event.start" %}BEGIN:VEVENT
+DTSTART:{{other.event.start_utc|date:"Ymd\\THis"}}Z
+DTEND:{{other.event.end_utc|date:"Ymd\\THis"}}Z
+LOCATION:Bergen Offentlige bibliotek
+DESCRIPTION:BLUG: {{other.title}}
+SUMMARY:BLUG: {{other.title}}
+END:VEVENT
+{% endfor %}END:VCALENDAR
