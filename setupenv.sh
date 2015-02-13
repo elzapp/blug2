@@ -10,5 +10,6 @@ fi
 
 pip install django
 pip install pyyaml
+pip install pytz
 
 export DJANGO_SETTINGS_MODULE=dsettings

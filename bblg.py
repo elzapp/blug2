@@ -7,6 +7,8 @@ from glob import glob
 from djangorender import render_template
 import datetime
 import copy
+from pytz import UTC,timezone
+TZ=timezone("Europe/Oslo")
 
 
 def genfilename(s):
@@ -39,18 +41,24 @@ def loadsingle(f):
                 parts[p] +=line
     ctx=yaml.load(parts[0])
     if "event" in ctx:
+        print ctx["event"]["start"]
+        print timezone("Europe/Oslo")
+        ctx["event"]["start"]=TZ.localize(ctx["event"]["start"])
+        print ctx["event"]["start"]
+        ctx["event"]["start_utc"]=ctx["event"]["start"].astimezone(UTC)
         ctx["event"]["end"]=ctx["event"]["start"] +  datetime.timedelta(0, 7200)
+        ctx["event"]["end_utc"]=ctx["event"]["end"].astimezone(UTC)
     ctx["content"]="<p>"+parts[1].replace("\n\n","</p>\n\n<p>").strip()+"</p>"
     return ctx
 
 def indexdata(data):
     index_data={}
     innkallinger=[e for e in data if "class" in e and e["class"]=="innkalling"]
-    kommende=[e for e in data if "event" in e and e["event"]["start"]>datetime.datetime.now()]
+    kommende=[e for e in data if "event" in e and e["event"]["start"]>datetime.datetime.now(timezone("Europe/Oslo"))]
     kommende=sorted(kommende,key=lambda e:e["event"]["start"])
     index_data["neste"]=kommende[0]
     index_data["kommende"]=kommende[1:]
-    tidligere=[e for e in data if "event" in e and e["event"]["start"]<datetime.datetime.now()]
+    tidligere=[e for e in data if "event" in e and e["event"]["start"]<datetime.datetime.now(timezone("Europe/Oslo"))]
     tidligere=sorted(tidligere,key=lambda e:e["event"]["start"])
     index_data["tidligere"]=tidligere
     return index_data

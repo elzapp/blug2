@@ -8,3 +8,4 @@ LANGUAGE_CODE = "nb_NO"
 DATETIME_FORMAT = "Y-m-d H:i"
 DATE_FORMAT="Y-m-d"
 LOGGING_CONFIG=None
+TIME_ZONE="Europe/Oslo"
